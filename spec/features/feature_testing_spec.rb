@@ -35,7 +35,7 @@ feature "deducting points" do
     sign_in_and_play
     click_link 'Attack'
     # click_link 'Confirmed attack!'
-    expect(page).to have_content "Chris: 10 points"
+    expect(page).to have_content "Chris: 15 points"
     expect(page).not_to have_content "Chris: 20 points"
   end
 end
