@@ -30,13 +30,13 @@ feature "Attacking players" do
 end
 
 
-feature "Player 2 takes damage" do
-  scenario 'player 2 loses HP' do
-    sign_in_and_play
-    # require "launchy";save_and_open_page
-    click_link 'Attack'
-    click_link 'Next Go'
-    expect(page).to have_content "Chris: 15HP"
-    # click_link 'Your Turn Player 2: Attack'
-  end
-end
+# feature "Player 2 takes damage" do
+#   scenario 'player 2 loses HP' do
+#     sign_in_and_play
+#     # require "launchy";save_and_open_page
+#     click_link 'Attack'
+#     click_link 'Next Go'
+#     expect(page).to have_content "Chris: 15HP"
+#     # click_link 'Your Turn Player 2: Attack'
+#   end
+# end
