@@ -30,6 +30,17 @@ feature "Attacking players" do
 end
 
 
+feature "deducting points" do
+  scenario 'player 2 receives damage and loses life' do
+    sign_in_and_play
+    click_link 'Attack'
+    # click_link 'Confirmed attack!'
+    expect(page).to have_content "Chris: 10 points"
+    expect(page).not_to have_content "Chris: 20 points"
+  end
+end
+
+
 # feature "Player 2 takes damage" do
 #   scenario 'player 2 loses HP' do
 #     sign_in_and_play
