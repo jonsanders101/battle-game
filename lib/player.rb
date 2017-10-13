@@ -1,5 +1,3 @@
-
-
 class Player
 
 DEFAULT_HIT_POINTS = 20
@@ -19,6 +17,5 @@ DEFAULT_HIT_POINTS = 20
   def lose_points
     @life -= 5
   end
-
 
 end
