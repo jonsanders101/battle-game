@@ -27,7 +27,17 @@ feature "Attacking players" do
     click_link 'Attack'
     expect(page).to have_content "Rory attacked Chris"
   end
+
+  scenario "swaps players after each vicious blow is dealt" do
+    sign_in_and_play
+    click_link 'Attack'
+    expect(page).to have_content "Rory attacked Chris"
+    click_link 'Return...if YA DARE'
+    click_link 'Attack'
+    expect(page).to have_content "Chris attacked Rory"
+  end
 end
+
 
 
 feature "deducting points" do
@@ -37,6 +47,10 @@ feature "deducting points" do
     # click_link 'Confirmed attack!'
     expect(page).to have_content "Chris: 15 points"
     expect(page).not_to have_content "Chris: 20 points"
+    click_link 'Return...if YA DARE'
+    click_link 'Attack'
+    expect(page).to have_content "Rory: 15 points"
+    expect(page).not_to have_content "Rory: 20 points"
   end
 end
 

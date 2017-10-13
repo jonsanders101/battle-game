@@ -10,5 +10,8 @@ end
     player.lose_points
   end
 
+  def swap_turn
+    @players << @players.shift
+  end
 
 end

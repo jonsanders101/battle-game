@@ -18,6 +18,7 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+    $game.swap_turn
     erb :play
   end
 
