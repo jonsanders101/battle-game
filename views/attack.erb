@@ -60,8 +60,9 @@ border-right-color: dashed 10px blue
 <br>
 <br>
 <h2>
-<%= $game.players[1].name %>: <%= $game.players[1].life %> points
-<a href='/play'>Return...if YA DARE</a>
+<form action="/switch-turns" method="post">
+<input type="submit" value="Return to battle...if YA DARE">
+</form>
 </h2>
 
 <br>

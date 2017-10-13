@@ -18,13 +18,17 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    $game.swap_turn
     erb :play
   end
 
   get '/attack' do
     $game.attack($game.players[1])
     erb :attack
+  end
+
+  post '/switch-turns' do
+    $game.swap_turn
+    redirect '/play'
   end
 
 

@@ -8,7 +8,7 @@
 feature "Entering players" do
   scenario 'Can enter the name of the player' do
     sign_in_and_play
-    expect(page).to have_content "Rory vs. Chris"
+    expect(page).to have_content "Chris vs. Rory"
   end
 end
 
@@ -25,14 +25,14 @@ feature "Attacking players" do
   scenario 'Can attack a player' do
     sign_in_and_play
     click_link 'Attack'
-    expect(page).to have_content "Rory attacked Chris"
+    expect(page).to have_content "Chris attacked Rory"
   end
 
   scenario "swaps players after each vicious blow is dealt" do
     sign_in_and_play
     click_link 'Attack'
     expect(page).to have_content "Rory attacked Chris"
-    click_link 'Return...if YA DARE'
+    click_link "Return to battle...if YA DARE"
     click_link 'Attack'
     expect(page).to have_content "Chris attacked Rory"
   end
@@ -47,7 +47,7 @@ feature "deducting points" do
     # click_link 'Confirmed attack!'
     expect(page).to have_content "Chris: 15 points"
     expect(page).not_to have_content "Chris: 20 points"
-    click_link 'Return...if YA DARE'
+    click_link "Return to battle...if YA DARE"
     click_link 'Attack'
     expect(page).to have_content "Rory: 15 points"
     expect(page).not_to have_content "Rory: 20 points"
