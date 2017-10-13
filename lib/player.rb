@@ -15,9 +15,6 @@ DEFAULT_HIT_POINTS = 20
     DEFAULT_HIT_POINTS
   end
 
-  def attack(player)
-    player.lose_points
-  end
 
   def lose_points
     @life -= 5

@@ -17,13 +17,6 @@ describe Player do
     end
   end
 
-  describe 'attack' do
-    it 'damages the player' do
-      expect(bloggs).to receive(:lose_points)
-      rory.attack(bloggs)
-    end
-  end
-
     describe '#lose points' do
       it 'deducts points' do
         expect {bloggs.lose_points}.to change {bloggs.life}.by(-5)

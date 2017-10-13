@@ -1,9 +1,67 @@
+<style>
+
+h1 {
+
+text-align: center;
+margin: 60px;
+background-color: #e2e2e2;
+padding: 5px;
+color: black;
+text-shadow:6px 6px red;
+font-size: 50px;
+font-weight: bold;
+text-transform: uppercase;
+
+}
+
+h2 {
+text-align:center;
+margin:30px auto 0 auto;
+background-color: #e2e2e2;
+padding: 5px;
+color: black;
+color:blue;
+text-shadow:2px 2px grey;
+font-size: 30px;
+font-weight: bold;
+text-transform: capitalize;
+
+}
+
+.confirmed_attack_button {
+
+
+
+}
+
+
+.image {
+
+border: solid 5px red;
+border-right-color: dashed 10px blue
+
+
+
+
+}
+
+
+
+</style>
+
+<h1>
 <%= @player_1.name %> attacked <%= @player_2.name %>
-
+</h1>
+<br>
+<br>
+<div>
+  <img class="image" src=https://i.ytimg.com/vi/Lf54gV0V5fI/maxresdefault.jpg height="200" width="200">
+</div>
+<br>
+<br>
+<h2>
 <%= @player_2.name %>: <%= @player_2.life %> points
-
-
-
+</h2>
 
 <br>
 <br>
