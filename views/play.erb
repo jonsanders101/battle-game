@@ -4,6 +4,12 @@
 </div>
 <%= $game.players[0].name %>: <%= $game.players[0].life %>HP
 <%= $game.players[1].name %>: <%= $game.players[1].life %>HP
+<% if $game.players[0].life <= 0 %>
+<h2> <%=$game.players[0].name%> is defeated! <%=$game.players[1].name%> is victorious! </h2>
+<% end %>
+<% if $game.players[1].life <= 0 %>
+<h2> <%=$game.players[1].name%> is defeated! <%=$game.players[0].name%> is victorious! </h2>
+<% end %>
 
 <!-- # <%= @player_1 %>: 20HP
 # <%= @player_2 %>: 20HP -->
