@@ -12,6 +12,10 @@ class Battle < Sinatra::Base
     erb :index
   end
 
+  before do
+    @game = Game.current_game
+  end
+
   post '/names' do
     player1 = Player.new(params[:player_1])
     player2 = Player.new(params[:player_2])
@@ -20,18 +24,18 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @game = Game.current_game
+    #@game = Game.current_game
     erb :play
   end
 
   get '/attack' do
-    @game = Game.current_game
+    #@game = Game.current_game
     @game.attack(@game.players[1])
     erb :attack
   end
 
   post '/switch-turns' do
-    @game = Game.current_game
+    #@game = Game.current_game
     @game.swap_turn
     redirect '/play'
   end
