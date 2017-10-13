@@ -50,7 +50,7 @@ border-right-color: dashed 10px blue
 </style>
 
 <h1>
-<%= @player_1.name %> attacked <%= @player_2.name %>
+<%= $game.players[0].name%> attacked <%= $game.players[1].name %>
 </h1>
 <br>
 <br>
@@ -60,7 +60,7 @@ border-right-color: dashed 10px blue
 <br>
 <br>
 <h2>
-<%= @player_2.name %>: <%= @player_2.life %> points
+<%= $game.players[1].name %>: <%= $game.players[1].life %> points
 </h2>
 
 <br>

@@ -18,14 +18,10 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @player_1 = $game.players[0]
-    @player_2 = $game.players[1]
     erb :play
   end
 
   get '/attack' do
-    @player_1 = $game.players[0]
-    @player_2 = $game.players[1]
     $game.attack($game.players[1])
     erb :attack
   end

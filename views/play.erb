@@ -1,9 +1,9 @@
 
 <div style="border: 5px solid red" >
-<h1><%= @player_1.name %> vs. <%= @player_2.name %></h1>
+<h1><%= $game.players[0].name %> vs. <%= $game.players[1].name %></h1>
 </div>
-<%= @player_1.name %>: <%= @player_1.life %>HP
-<%= @player_2.name %>: <%= @player_2.life %>HP
+<%= $game.players[0].name %>: <%= $game.players[0].life %>HP
+<%= $game.players[1].name %>: <%= $game.players[1].life %>HP
 
 <!-- # <%= @player_1 %>: 20HP
 # <%= @player_2 %>: 20HP -->
